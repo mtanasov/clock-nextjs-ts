@@ -1,0 +1,17 @@
+/*!***************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[3].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[3].oneOf[5].use[3]!./app/global.module.css ***!
+  \***************************************************************************************************************************************************************************************************************************************************************/
+.global_body__REuYx {
+  text-align: center;
+}
+
+.global_nav__ZH4fJ {
+  background-color: rgb(104, 224, 178);
+  display: inline-block;
+}
+
+.global_nav__ZH4fJ>* {
+  margin: 10px;
+  text-decoration: none;
+  font-size: 25px;
+}
