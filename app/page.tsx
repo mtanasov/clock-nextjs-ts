@@ -9,12 +9,16 @@ import React, { useState } from 'react';
 import { alarm, stopWatch, timer, worldTime } from "../data/data";
 
 export default function Page() {
-  const [alarmState, setAlarmState] = useState(true);
+  const [worldTimeState, setWorldTimeState] = useState(true);
+  const [alarmState, setAlarmState] = useState(false);
   const [stopwatchState, setStopwatchState] = useState(false);
   const [timerState, setTimerState] = useState(false);
-  const [worldTimeState, setWorldTimeState] = useState(false);
 
   const arrSetState = [
+    {
+      id: worldTime.id,
+      state: (param: any) => setWorldTimeState(param)
+    },
     {
       id: alarm.id,
       state: (param: any) => setAlarmState(param)
@@ -27,10 +31,6 @@ export default function Page() {
       id: timer.id,
       state: (param: any) => setTimerState(param)
     },
-    {
-      id: worldTime.id,
-      state: (param: any) => setWorldTimeState(param)
-    }
   ];
 
   const checked = (event: any) => {
@@ -50,8 +50,11 @@ export default function Page() {
 
   return (
     <>
+      {stopwatchState ? <StopWatch></StopWatch> : false}
+      {alarmState ? <Alarm></Alarm> : false}
+      {worldTimeState ? <WorldTime></WorldTime> : false}
+      {timerState ? <Timer></Timer> : false}
       <Header
-
         alarmState={
           (event: any) => {
             return checked(event)
@@ -72,11 +75,7 @@ export default function Page() {
             return checked(event)
           }
         }
-      ></Header>
-      {alarmState ? <Alarm></Alarm> : false}
-      {stopwatchState ? <StopWatch></StopWatch> : false}
-      {timerState ? <Timer></Timer> : false}
-      {worldTimeState ? <WorldTime></WorldTime> : false}
+      />
     </>
   )
 }

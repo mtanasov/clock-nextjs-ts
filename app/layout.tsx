@@ -1,5 +1,6 @@
+// "use client"
+
 import styles from "./global.module.css";
-import React, { useState } from 'react';
 
 export default function RootLayout({ children }) {
   return (

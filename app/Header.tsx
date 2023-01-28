@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useState } from 'react';
 import styles from "./global.module.css";
 import { alarm, stopWatch, timer, worldTime } from "../data/data";
@@ -14,13 +16,19 @@ export default function Header(
 
   return (
     <div id="header">
-      <h1> Программа </h1>
       <div className={styles.nav}>
+        <input
+          id={worldTime.id}
+          type="radio"
+          name="clock"
+          defaultChecked
+          onChange={props.worldTimeState}
+        /> Мировое время
+
         <input
           id={alarm.id}
           type="radio"
           name="clock"
-          defaultChecked
           onChange={props.alarmState}
         /> Будильник
 
@@ -31,6 +39,8 @@ export default function Header(
           onChange={props.stopwatchState}
         /> Секундомер
 
+
+
         <input
           id={timer.id}
           type="radio"
@@ -38,12 +48,6 @@ export default function Header(
           onChange={props.timerState}
         /> Таймер
 
-        <input
-          id={worldTime.id}
-          type="radio"
-          name="clock"
-          onChange={props.worldTimeState}
-        /> Мировое время
       </div>
     </div>
   )
