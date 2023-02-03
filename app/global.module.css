@@ -1,5 +1,8 @@
 .body {
   text-align: center;
+  width: 320px;
+  height: 550px;
+  border: 2px solid black;
 }
 
 .nav {

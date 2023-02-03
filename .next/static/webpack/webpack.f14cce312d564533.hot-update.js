@@ -83,7 +83,7 @@ self["webpackHotUpdate_N_E"]("webpack",{},
 /******/ 
 /******/ /* webpack/runtime/getFullHash */
 /******/ !function() {
-/******/ 	__webpack_require__.h = function() { return "4fd0209e42dca55c"; }
+/******/ 	__webpack_require__.h = function() { return "1a64d5f185a258d0"; }
 /******/ }();
 /******/ 
 /******/ /* webpack/runtime/make namespace object */
@@ -167,7 +167,7 @@ self["webpackHotUpdate_N_E"]("webpack",{},
 /******/ 	};
 /******/ 	
 /******/ 	__webpack_require__.f.miniCss = function(chunkId, promises) {
-/******/ 		var cssChunks = {"_app-client_app_global_module_css":1};
+/******/ 		var cssChunks = {"_app-client_app_globals_css":1};
 /******/ 		if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 		else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 			promises.push(installedCssChunks[chunkId] = loadStylesheet(chunkId).then(function() {

@@ -52,7 +52,7 @@ export default function Page() {
     <>
       {stopwatchState ? <StopWatch></StopWatch> : false}
       {alarmState ? <Alarm></Alarm> : false}
-      {worldTimeState ? <WorldTime></WorldTime> : false}
+      {worldTimeState ? <WorldTime ></WorldTime> : false}
       {timerState ? <Timer></Timer> : false}
       <Header
         alarmState={

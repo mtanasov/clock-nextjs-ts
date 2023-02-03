@@ -1,12 +1,12 @@
 // "use client"
 
-import styles from "./global.module.css";
+import "./globals.css"
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: any) {
   return (
     <html lang="en">
       <head />
-      <body className={styles.body}>
+      <body className="text-center bg-black h-[568px] w-[320px]">
         {children}
       </body>
     </html>

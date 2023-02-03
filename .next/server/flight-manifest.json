@@ -133,22 +133,9 @@
   },
   "__edge_ssr_module_mapping__": {},
   "__entry_css_files__": {
-    "D:\\Front-end\\next\\astwt\\app\\page": [
-      "static/css/app/page.css"
-    ],
     "D:\\Front-end\\next\\astwt\\app\\layout": [
-      "static/css/_app-client_app_global_module_css.css"
+      "static/css/_app-client_app_globals_css.css"
     ]
-  },
-  "D:\\Front-end\\next\\astwt\\app\\global.module.css": {
-    "default": {
-      "id": "null",
-      "name": "default",
-      "chunks": [
-        "static/css/app/page.css",
-        "static/css/_app-client_app_global_module_css.css"
-      ]
-    }
   },
   "D:\\Front-end\\next\\astwt\\app\\page.tsx": {
     "": {
@@ -278,6 +265,15 @@
         "app-client-internals:app-client-internals"
       ],
       "async": false
+    }
+  },
+  "D:\\Front-end\\next\\astwt\\app\\globals.css": {
+    "default": {
+      "id": "null",
+      "name": "default",
+      "chunks": [
+        "static/css/_app-client_app_globals_css.css"
+      ]
     }
   }
 }

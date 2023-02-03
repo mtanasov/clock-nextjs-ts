@@ -1,0 +1,23 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx}", // Note the addition of the `app` directory.
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    colors: {
+      transparent: 'transparent',
+      current: 'currentColor',
+      'icons': '#f78739',
+      'bermuda': '#78dcca',
+      'black': "#111",
+    },
+    extend: {
+      height: {
+        '128': "32rem",
+      }
+    },
+  },
+  plugins: [],
+}
