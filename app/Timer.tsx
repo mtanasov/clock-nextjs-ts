@@ -2,7 +2,9 @@
 export default function Timer() {
   return (
     <>
-      <div> Timer </div>
+      <div
+        className="text-bermuda"
+      > Timer </div>
     </>
   )
 }

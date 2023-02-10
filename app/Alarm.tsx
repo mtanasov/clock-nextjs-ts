@@ -2,7 +2,9 @@
 export default function Alarm() {
   return (
     <>
-      <div> Alarm </div>
+      <div
+        className="text-bermuda"
+      > Alarm </div>
     </>
   )
 }

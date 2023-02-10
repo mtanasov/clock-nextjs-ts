@@ -2,7 +2,9 @@
 export default function StopWatch() {
   return (
     <>
-      <div> Stop watch </div>
+      <div
+        className="text-bermuda"
+      > Stop watch </div>
     </>
   )
 }

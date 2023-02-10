@@ -50,10 +50,12 @@ export default function Page() {
 
   return (
     <>
-      {stopwatchState ? <StopWatch></StopWatch> : false}
-      {alarmState ? <Alarm></Alarm> : false}
-      {worldTimeState ? <WorldTime ></WorldTime> : false}
-      {timerState ? <Timer></Timer> : false}
+      <div className="h-[515px]">
+        {stopwatchState ? <StopWatch></StopWatch> : false}
+        {alarmState ? <Alarm></Alarm> : false}
+        {worldTimeState ? <WorldTime ></WorldTime> : false}
+        {timerState ? <Timer></Timer> : false}
+      </div>
       <Header
         alarmState={
           (event: any) => {

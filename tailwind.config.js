@@ -9,7 +9,7 @@ module.exports = {
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
-      'icons': '#f78739',
+      'icons': '#ff9f0a',
       'bermuda': '#78dcca',
       'black': "#111",
     },
