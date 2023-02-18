@@ -9,9 +9,12 @@ module.exports = {
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
-      'icons': '#ff9f0a',
-      'bermuda': '#78dcca',
+      'main-orange': '#ff9f0a',
+      'main-gray': "gray",
+      'bermuda': '#fff',
       'black': "#111",
+      "modal-bg": "#1c1c1e",
+      "search-bg": "#3a393e",
     },
     extend: {
       height: {
@@ -19,5 +22,9 @@ module.exports = {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography')({
+      className: "attr",
+    }),
+  ],
 }

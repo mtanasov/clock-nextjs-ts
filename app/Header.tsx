@@ -3,14 +3,6 @@ import React, { useState, ButtonHTMLAttributes } from 'react';
 import { alarm, stopWatch, timer, worldTime } from "../data/data";
 import { IconWorld, IconAlarm, IconClock, IconClockPlay } from '@tabler/icons-react';
 
-// interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-//   text: string,
-//   type: ButtonTypes,
-//   action: () => void
-// }
-
-// const ExtendedButton: React.FC<IButtonProps> = ({ text, propTypes, action }) => { }
-
 export default function Header(
   props: {
     alarmState: any;
@@ -20,20 +12,33 @@ export default function Header(
   }
 ): JSX.Element {
 
-  const buttonStyle: string = "text-center text-[10px] text-icons align-bottom font-[400] w-[70px]";
+  const orange = "text-main-orange";
+  const gray = "text-main-gray";
+
+  // const [worldTimeColor, setWorldTimeColor] = useState(orange);
+  // const [alarmColor, setAlarmColor] = useState("text-main-gray");
+  // const [stopWatchColor, setStopWatchColor] = useState("text-main-gray");
+  // const [timerColor, setTimerColor] = useState("text-main-gray");
+
+  const buttonStyle: string = `text-center text-[10px] align-bottom font-[400] w-[70px] + ${orange}`;
   const iconStyle: string = "inline-block font-[100]";
   const iconSize: number = 32;
   const iconStroke: number = 1.2;
 
   return (
-    <div id="header" className="flex justify-center gap-x-[10px] bg-black relative w-[320px] h-[45px] pt-[5px] mb-[5px]">
+    <div id="header" className="flex justify-center gap-x-[10px] bg-black relative w-[320px] h-[53px] pt-[5px] mb-[5px]">
 
       <div
         className={buttonStyle}
         id={worldTime.id}
         onClick={props.worldTimeState}
       >
-        <IconWorld id={worldTime.id} className={iconStyle} stroke={iconStroke} size={iconSize} />
+        <IconWorld
+          id={worldTime.id}
+          className={iconStyle}
+          stroke={iconStroke}
+          size={iconSize}
+        />
         <div id={worldTime.id} >Мировые часы</div>
       </div>
 
@@ -42,7 +47,11 @@ export default function Header(
         id={alarm.id}
         onClick={props.alarmState}
       >
-        <IconAlarm id={alarm.id} className={iconStyle} stroke={iconStroke} size={iconSize} />
+        <IconAlarm
+          id={alarm.id}
+          className={iconStyle}
+          stroke={iconStroke}
+          size={iconSize} />
         <div id={alarm.id}>Будильник</div>
       </div>
 
@@ -51,7 +60,11 @@ export default function Header(
         id={stopWatch.id}
         onClick={props.stopwatchState}
       >
-        <IconClock id={stopWatch.id} className={iconStyle} stroke={iconStroke} size={iconSize} />
+        <IconClock
+          id={stopWatch.id}
+          className={iconStyle}
+          stroke={iconStroke}
+          size={iconSize} />
         <div id={stopWatch.id}>Секундомер</div>
       </div>
 
@@ -60,7 +73,11 @@ export default function Header(
         id={timer.id}
         onClick={props.timerState}
       >
-        <IconClockPlay id={timer.id} className={iconStyle} stroke={iconStroke} size={iconSize} />
+        <IconClockPlay
+          id={timer.id}
+          className={iconStyle}
+          stroke={iconStroke}
+          size={iconSize} />
         <div id={timer.id}>Таймер</div>
       </div>
     </div>
