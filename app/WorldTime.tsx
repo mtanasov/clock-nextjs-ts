@@ -8,23 +8,22 @@ const Clock = dynamic(() => import('./Clock'), {
 
 export default function WorldTime() {
   const [display, setDisplay] = useState("none");
+  const [showListCities__modal, setShowListCities__modal] = useState(false);
 
-  const onClick__buttonPlus = () => {
-    switch (true) {
-      case (display === "none"): setDisplay("inline-block"); break;
-      case (display === "inline-block"): setDisplay("none"); break;
-    }
-    console.log("🎵", display);
+  // const onClick__buttonPlus = () => {
+  //   switch (true) {
+  //     case (display === "none"): setDisplay("inline-block"); break;
+  //     case (display === "inline-block"): setDisplay("none"); break;
+  //   }
+  //   console.log("🎵", display);
+  // }
+
+  const onClickButton_Cancel = () => {
+    setShowListCities__modal(false)
   }
 
-  if (display === "inline-block") {
-    return (
-      <div>
-        <Modal
-          letter='A'
-        ></Modal>
-      </div>
-    )
+  const onClick = () => {
+    setShowListCities__modal(true)
   }
 
   return (
@@ -39,7 +38,7 @@ export default function WorldTime() {
 
           <span
             className=" w-[26px] text-[40px] font-light align-text-top"
-            onClick={onClick__buttonPlus}
+            onClick={onClick}
           >
             +
           </span>
@@ -49,7 +48,11 @@ export default function WorldTime() {
         <h1 className=" font-[600] justify-start mx-[12px]"> Мировые часы </h1>
       </div>
 
-
+      <Modal
+        active={showListCities__modal}
+        buttonCancel={onClickButton_Cancel}
+        letter="A"
+      ></Modal>
 
       {/* <Clock /> */}
     </div >

@@ -20,11 +20,12 @@ const style = {
 }
 
 interface ModalWT {
-  title: string;
-  letter: string;
-  arrList: [];
+  title?: string;
+  letter?: string;
+  arrList?: [];
+  active: boolean;
   buttonCancel: () => void;
-  buttonCity: () => void;
+  onSubmit: () => void;
 }
 
 interface List {
@@ -32,19 +33,33 @@ interface List {
   buttonCity: () => void;
 }
 
-const Modal = ({ title, letter, arrList, buttonCancel, buttonCity, children }: PropsWithChildren<ModalWT>) => {
+const Modal = ({ title, letter, arrList, buttonCancel, onSubmit, children, active }: PropsWithChildren<ModalWT>) => {
+  if (!active) {
+    return null
+  }
+
   return (
-    <div id="modal" className={style.modal}>
+    <div id="modal" className={style.modal} /* onClick={buttonCancel} */>
       <div id="modal__title" className={style.modal__title}> Выбрать город </div>
       <div id="modal__control" className={style.modal__control}>
-        <input type="text" id="modal__search" className={style.modal__search} placeholder="🔍 Поиск" />
-        <button id="modal__cancel" className={style.modal__cancel}> Отменить </button>
+        <input
+          type="text"
+          id="modal__search"
+          className={style.modal__search}
+          placeholder="🔍 Поиск" />
+        <button
+          id="modal__cancel"
+          className={style.modal__cancel}
+          onClick={buttonCancel}
+        >
+          Отменить
+        </button>
       </div>
       <div id="modal__list" className={style.modal__list}>
         <h2 id="modal__list_letter" className={style.modal__list_letter} >{letter}</h2>
         <div id="cities" className={style.cities}>
           <ol>
-            <li>city 1</li>
+            <li>city 1</li> //button onSubmit
             <li>city 2</li>
             <li>city 3</li>
             <li>city 4</li>
