@@ -1,6 +1,7 @@
 // "use client"
 
 import React, { useState, useEffect } from 'react';
+import { useInterval } from '../hooks/use-interval';
 
 const styles = {
   color: "white",
@@ -9,19 +10,20 @@ const styles = {
 
 export default function Clock(props: {}) {
   const date = new Date();
-  const [dateNow, setDateNow] = useState(new Date());
+  const [dateNow, setDateNow] = useState<string | undefined>();
+
+  const interval = useInterval(() => setDateNow(
+    () => `${date.getHours()} : ${date.getMinutes()} : ${date.getSeconds()} `,
+  ), 1000);
 
   useEffect(() => {
-    setInterval(() => {
-      setDateNow(new Date())
-    }, 1000)
-
+    interval.start();
+    return interval.stop;
   }, [dateNow])
 
   return (
     <div /* style={styles} */>
-      <p> {`${dateNow.getHours()} : ${dateNow.getMinutes()} : ${dateNow.getSeconds()} `
-      }</p >
+      <p> {dateNow || "Loading..."}</p>
     </div>
   )
 } 

@@ -6,25 +6,29 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@tabler/icons": "^2.2.0",
-    "@tabler/icons-react": "^2.2.0",
-    "eslint-config-next": "^0.2.4",
-    "next": "^13.1.1",
+    "@tabler/icons": "^2.7.0",
+    "@tabler/icons-react": "^2.7.0",
+    "dayjs": "^1.11.7",
+    "eslint-config-next": "^13.2.3",
+    "next": "^13.2.3",
     "react": "^18.2.0",
-    "react-clock": "^4.0.0",
+    "react-clock": "^4.1.0",
     "react-clock-correct-locale": "^1.0.1",
     "react-dom": "^18.2.0",
+    "react-moment": "^1.1.3",
+    "timezonecomplete": "^5.12.4",
+    "tzdata": "^1.0.36",
     "world-clock": "^1.4.0"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.9",
-    "@types/node": "18.11.18",
-    "@types/react": "18.0.26",
+    "@types/node": "18.14.6",
+    "@types/react": "18.0.28",
     "autoprefixer": "^10.4.13",
     "postcss": "^8.4.21",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-preset-env": "^8.0.1",
-    "tailwindcss": "^3.2.4",
-    "typescript": "4.9.4"
+    "tailwindcss": "^3.2.7",
+    "typescript": "4.9.5"
   }
 }

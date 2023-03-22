@@ -36,7 +36,7 @@ export default function Page() {
   const checked = (event: any) => {
     const targetID = event.target.id;
 
-    console.log("ID", targetID);
+    console.log("ID", targetID, event.target);
 
     arrSetState.map(item => {
       switch (true) {

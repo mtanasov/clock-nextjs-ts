@@ -1,8 +1,8 @@
 /*!***********************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[3].oneOf[11].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[3].oneOf[11].use[3]!./app/globals.css ***!
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[2].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[2].oneOf[13].use[3]!./app/globals.css ***!
   \***********************************************************************************************************************************************************************************************************************************************************/
 /*
-! tailwindcss v3.2.4 | MIT License | https://tailwindcss.com
+! tailwindcss v3.2.7 | MIT License | https://tailwindcss.com
 *//*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
 2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
@@ -854,22 +854,22 @@ video {
 .relative {
   position: relative;
 }
-.top-\[48px\] {
-  top: 48px;
-}
 .z-\[1\] {
   z-index: 1;
-}
-.mx-\[15px\] {
-  margin-left: 15px;
-  margin-right: 15px;
 }
 .mx-\[12px\] {
   margin-left: 12px;
   margin-right: 12px;
 }
+.mx-\[15px\] {
+  margin-left: 15px;
+  margin-right: 15px;
+}
 .mb-\[5px\] {
   margin-bottom: 5px;
+}
+.ml-\[5px\] {
+  margin-left: 5px;
 }
 .inline-block {
   display: inline-block;
@@ -877,35 +877,38 @@ video {
 .flex {
   display: flex;
 }
-.h-\[53px\] {
-  height: 53px;
-}
-.h-\[568px\] {
-  height: 568px;
-}
-.h-\[520px\] {
-  height: 520px;
-}
-.h-\[40px\] {
-  height: 40px;
+.h-\[100\%\] {
+  height: 100%;
 }
 .h-\[30px\] {
   height: 30px;
 }
-.h-\[515px\] {
-  height: 515px;
+.h-\[40px\] {
+  height: 40px;
 }
-.h-\[100\%\] {
-  height: 100%;
+.h-\[48px\] {
+  height: 48px;
 }
 .h-\[50px\] {
   height: 50px;
 }
-.w-\[70px\] {
-  width: 70px;
+.h-\[515px\] {
+  height: 515px;
 }
-.w-\[320px\] {
-  width: 320px;
+.h-\[53px\] {
+  height: 53px;
+}
+.h-\[550px\] {
+  height: 550px;
+}
+.h-\[568px\] {
+  height: 568px;
+}
+.h-\[20px\] {
+  height: 20px;
+}
+.h-\[35px\] {
+  height: 35px;
 }
 .w-\[100\%\] {
   width: 100%;
@@ -916,11 +919,49 @@ video {
 .w-\[26px\] {
   width: 26px;
 }
+.w-\[320px\] {
+  width: 320px;
+}
+.w-\[70px\] {
+  width: 70px;
+}
+.w-\[80\%\] {
+  width: 80%;
+}
+@keyframes close_modal {
+
+  0% {
+    top: 18px;
+  }
+
+  100% {
+    top: 100%;
+  }
+}
+.animate-close_modal {
+  animation: close_modal 0.6s ease-out forwards 0.6s;
+}
+@keyframes open_modal {
+
+  0% {
+    top: 100%;
+  }
+
+  100% {
+    top: 18px;
+  }
+}
+.animate-open_modal {
+  animation: open_modal 0.6s ease-out forwards;
+}
 .flex-row {
   flex-direction: row;
 }
 .flex-col {
   flex-direction: column;
+}
+.items-start {
+  align-items: flex-start;
 }
 .items-center {
   align-items: center;
@@ -941,12 +982,36 @@ video {
   -moz-column-gap: 10px;
        column-gap: 10px;
 }
+.overflow-y-auto {
+  overflow-y: auto;
+}
 .rounded-\[10px\] {
   border-radius: 10px;
 }
 .rounded-t-\[10px\] {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+}
+.border-2 {
+  border-width: 2px;
+}
+.border-b {
+  border-bottom-width: 1px;
+}
+.border-solid {
+  border-style: solid;
+}
+.border-\[\#64748b\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(100 116 139 / var(--tw-border-opacity));
+}
+.border-\[\#878d8d\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(135 141 141 / var(--tw-border-opacity));
+}
+.bg-\[yellow\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 0 / var(--tw-bg-opacity));
 }
 .bg-black {
   --tw-bg-opacity: 1;
@@ -960,15 +1025,36 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(58 57 62 / var(--tw-bg-opacity));
 }
+.bg-\[url\(\'\.\.\/img\/world\.svg\'\)\] {
+  background-image: url(/_next/static/media/world.e7311652.svg);
+}
+.bg-\[length\:40px_40px\] {
+  background-size: 40px 40px;
+}
+.bg-no-repeat {
+  background-repeat: no-repeat;
+}
+.p-\[10px\] {
+  padding: 10px;
+}
 .px-\[5px\] {
   padding-left: 5px;
   padding-right: 5px;
 }
+.pt-\[10px\] {
+  padding-top: 10px;
+}
 .pt-\[5px\] {
   padding-top: 5px;
 }
-.pt-\[10px\] {
-  padding-top: 10px;
+.pl-\[20px\] {
+  padding-left: 20px;
+}
+.pl-\[15px\] {
+  padding-left: 15px;
+}
+.pt-\[7px\] {
+  padding-top: 7px;
 }
 .text-left {
   text-align: left;
@@ -988,42 +1074,76 @@ video {
 .text-\[10px\] {
   font-size: 10px;
 }
-.text-\[16px\] {
-  font-size: 16px;
-}
 .text-\[14px\] {
   font-size: 14px;
 }
-.text-\[30px\] {
-  font-size: 30px;
+.text-\[16px\] {
+  font-size: 16px;
 }
 .text-\[18px\] {
   font-size: 18px;
 }
+.text-\[20px\] {
+  font-size: 20px;
+}
+.text-\[30px\] {
+  font-size: 30px;
+}
 .text-\[40px\] {
   font-size: 40px;
 }
-.font-\[400\] {
-  font-weight: 400;
+.text-\[12px\] {
+  font-size: 12px;
+}
+.text-\[13px\] {
+  font-size: 13px;
+}
+.text-\[1vh\] {
+  font-size: 1vh;
+}
+.text-\[1\.8vh\] {
+  font-size: 1.8vh;
+}
+.text-\[1\.6vh\] {
+  font-size: 1.6vh;
 }
 .font-\[100\] {
   font-weight: 100;
 }
-.font-light {
-  font-weight: 300;
+.font-\[400\] {
+  font-weight: 400;
 }
 .font-\[600\] {
   font-weight: 600;
+}
+.font-light {
+  font-weight: 300;
 }
 .text-bermuda {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
+.text-main-gray {
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity));
+}
 .text-main-orange {
   --tw-text-opacity: 1;
   color: rgb(255 159 10 / var(--tw-text-opacity));
 }
-.text-main-gray {
+.text-\[\#bfc2c2\] {
   --tw-text-opacity: 1;
-  color: rgb(128 128 128 / var(--tw-text-opacity));
+  color: rgb(191 194 194 / var(--tw-text-opacity));
+}
+.transition {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
