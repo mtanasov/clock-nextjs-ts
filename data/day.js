@@ -1,7 +1,10 @@
-// const dayjs = require('dayjs')
-// //import dayjs from 'dayjs' // ES 2015
-// dayjs().format()
+const dayjs = require('dayjs')
 
-// export const dayJS_test = dayjs().format();
+const utc = require('dayjs/plugin/utc');
+const timezone = require('dayjs/plugin/timezone');
+dayjs.extend(utc)
+dayjs.extend(timezone)
 
-// console.log();
+export const timeZone = (city) => {
+  return console.log(`${city}: `, dayjs.utc(dayjs()).tz(city).$d);
+}

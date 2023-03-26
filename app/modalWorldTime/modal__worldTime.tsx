@@ -2,15 +2,8 @@ import { SERVER_PROPS_ID } from "next/dist/shared/lib/constants";
 import React, { PropsWithChildren, useRef, useEffect, HTMLAttributes, HTMLAttributeReferrerPolicy, Attributes, createRef } from "react";
 import { receiveMessageOnPort } from "worker_threads";
 import { style } from "./style-modalWorldTime";
-// import { jsonData, tc } from "../../data/time-zone";
-import { aryIannaTimeZones } from "../../data/time-zone"
-
-// const tz = timeZone;
-// console.log(jsonData)
-// console.log(tc)
-console.log(aryIannaTimeZones)
-
-
+import { aryIannaTimeZones } from "../../data/time-zone";
+import { timeZone } from "../../data/day";
 
 interface ModalWT {
   title?: string;
@@ -32,6 +25,10 @@ const Modal = ({ title, letter, arrList, buttonCancel, onSubmit, children, activ
   // if (!active) {
   //   return null
   // }
+  const handleClick_selectCity = (event: any) => {
+    const city = event.currentTarget.textContent;
+    timeZone(city)
+  }
 
   return (
     <div id="modal" className={style.modal(active)} >
@@ -59,11 +56,12 @@ const Modal = ({ title, letter, arrList, buttonCancel, onSubmit, children, activ
           {/* <h2 id="modal__list_letter" className={style.modal__list_letter} >{letter}</h2> */}
           <div id="cities" className={style.cities}>
             {
-              aryIannaTimeZones.map((item: string) => {
+              aryIannaTimeZones.map((item: string, index: number) => {
                 return (
                   <button
+                    key={index.toString()}
                     className={style.button}
-                    onClick={(event) => { console.log(event.target) }}>
+                    onClick={handleClick_selectCity}>
                     {item}
                   </button>
                 )

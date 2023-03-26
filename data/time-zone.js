@@ -1,6 +1,3 @@
-// export const jsonData = require('tzdata');
-// export const tc = require("timezonecomplete");
-
 export const aryIannaTimeZones = [
   'Europe/Andorra',
   'Asia/Dubai',
@@ -351,9 +348,3 @@ export const aryIannaTimeZones = [
   'Pacific/Apia',
   'Africa/Johannesburg'
 ];
-
-// let date = new Date;
-// aryIannaTimeZones.forEach((timeZone) => {
-//   let strTime = date.toLocaleString("en-US", { timeZone: `${timeZone}` });
-//   console.log(timeZone, strTime);
-// });

@@ -6,38 +6,15 @@ import { alarm, stopWatch, timer, worldTime } from "../data/data";
 
 // import * as dayjs from 'dayjs';
 
-const dayjs = require('dayjs')
+/* const dayjs = require('dayjs')
 
 const utc = require('dayjs/plugin/utc');
-const timezone = require('dayjs/plugin/timezone');// dependent on utc plugin
-// console.log(timezone());
+const timezone = require('dayjs/plugin/timezone');
 
 dayjs.extend(utc)
 dayjs.extend(timezone)
 
-console.log(dayjs.utc(dayjs()).tz('Europe/Paris'));
-
-const timestamp = "2014-06-01 12:00"
-const tz = "America/New_York"
-
-const dayjsLocal = dayjs(timestamp); //assumes UTC
-//dayjsLocal.toISOString() -> 2014-06-01T12:00:00.000Z
-//dayjsLocal.format('YYYY-MM-DDTHH:mm:ss') -> 2014-06-01T12:00:00
-
-const dayjsAmerica = dayjsLocal.tz(tz)  //existing time treated as UTC
-//dayjsAmerica.toISOString() -> 2014-06-01T12:00:00.000Z
-//dayjsAmerica.format('YYYY-MM-DDTHH:mm:ss') -> 2014-06-01T08:00:00
-
-
-const dayjsAmericaKeep = dayjsLocal.tz(tz, true) //existing time treated as local time
-//dayjsAmericaKeep.toISOString() -> 2014-06-01T16:00:00.000Z
-//dayjsAmericaKeep.format('YYYY-MM-DDTHH:mm:ss') -> 2014-06-01T12:00:00
-
-// console.log(dayjs().format());
-
-
-
-
+console.log(dayjs.utc(dayjs()).tz('Europe/Paris')); */
 
 export default function Header(
   props: {
