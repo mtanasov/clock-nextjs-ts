@@ -1,29 +1,60 @@
 // "use client"
 
-import React, { useState, useEffect } from 'react';
-import { useInterval } from '../hooks/use-interval';
+import React, { useState, useEffect } from "react";
+import { useInterval } from "../hooks/use-interval";
+import { arrSelectedCities } from "../data/data_selectedCities";
+import { timeZone } from "../data/day";
 
-const styles = {
-  color: "white",
-  fontSize: "30px",
-}
+console.log("сырой массив", arrSelectedCities);
 
 export default function Clock(props: {}) {
-  const date = new Date();
-  const [dateNow, setDateNow] = useState<string | undefined>();
+  const [listSelectedCities, setListSelectedCities] =
+    useState<Array<{ city: ""; time: "" }>>();
 
-  const interval = useInterval(() => setDateNow(
-    () => `${date.getHours()} : ${date.getMinutes()} : ${date.getSeconds()} `,
-  ), 1000);
+  const intervalCities = useInterval(
+    (): any =>
+      setListSelectedCities((): any => {
+        return ([] = arrSelectedCities.map((item) => {
+          return {
+            city: item,
+            time: timeZone(item).split(" ", 5).join(" "),
+          };
+        }));
+      }),
+    1000
+  );
 
   useEffect(() => {
-    interval.start();
-    return interval.stop;
-  }, [dateNow])
+    intervalCities.start();
+    return intervalCities.stop;
+  }, [listSelectedCities]);
 
   return (
-    <div /* style={styles} */>
-      <p> {dateNow || "Loading..."}</p>
+    <div>
+      {listSelectedCities ? (
+        listSelectedCities.map(
+          (item: { city: string; time: string }, index: number) => {
+            return (
+              <div
+                style={{
+                  color: "#9aad9a",
+                  fontSize: "17px",
+                  padding: "10px 0",
+                }}
+                key={index.toString()}
+              >
+                <div>{item.city} :</div>
+                <span>{item.time}</span>
+              </div>
+            );
+          }
+        )
+      ) : (
+        <div style={{ color: "#9aad9a", fontSize: "17px" }}>
+          {" "}
+          тут будут выбранные вами города{" "}
+        </div>
+      )}
     </div>
-  )
-} 
+  );
+}

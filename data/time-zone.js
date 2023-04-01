@@ -1,4 +1,4 @@
-export const aryIannaTimeZones = [
+export const arrayCities = [
   'Europe/Andorra',
   'Asia/Dubai',
   'Asia/Kabul',

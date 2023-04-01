@@ -17,7 +17,7 @@ export const style = {
   modal__control: "align-center pt-[10px] flex flex-row gap-[10px] ml-[5px]",
   modal__search: "w-[210px] h-[30px] px-[5px] rounded-[10px] bg-search-bg attr text-[14px] align-middle",
   cities: "flex flex-col items-start",
-  button: "w-[100%] h-[35px] text-left text-[#bfc2c2] text-[1.6vh] align-middle pl-[15px] border-solid border-b border-[#878d8d]"
+  button: "w-[100%] h-[35px] text-left text-[#bfc2c2] text-[0.8rem] align-middle pl-[15px] border-solid border-b border-[#878d8d]"
   // modal__cancel() { },
   // modal__list() { },
   // modal__list_letter() { },

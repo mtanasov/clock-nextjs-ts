@@ -6,6 +6,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@hookstate/core": "^4.0.0",
     "@tabler/icons": "^2.7.0",
     "@tabler/icons-react": "^2.7.0",
     "dayjs": "^1.11.7",
