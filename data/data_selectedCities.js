@@ -4,4 +4,7 @@ export const arrSelectedCities = [
   "Australia/Lord_Howe",
   "Antarctica/Macquarie",
   "Australia/Hobart",
+  "America/Cuiaba",
+  "America/Santarem",
+  "America/Porto_Velho",
 ];

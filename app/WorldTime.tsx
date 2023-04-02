@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import { useInterval } from "../hooks/use-interval";
-import { localTime } from "../data/day";
-
 import Clock from "./Clock";
+
+//todo ???
+// import cities from "all-the-cities";
+// console.log(cities.filter((city: any) => city.name.match("Albuquerque")));
 
 const Modal = dynamic(() => import("./modalWorldTime/modal__worldTime"));
 
@@ -11,9 +13,9 @@ export default function WorldTime() {
   const [display, setDisplay] = useState("none");
   const [showListCities__modal, setShowListCities__modal] = useState(false);
   const [dateNow, setDateNow] = useState<string | undefined>();
-  const date = new Date();
+  const date = new Date().toLocaleTimeString();
 
-  const interval = useInterval(() => setDateNow((): any => localTime()), 1000);
+  const interval = useInterval(() => setDateNow(() => `${date}`), 1000);
 
   useEffect(() => {
     interval.start();
@@ -29,7 +31,7 @@ export default function WorldTime() {
       <div className="w-[320px] h-[30px]  text-main-orange">
         <div className="flex justify-between h-[100%] items-center mx-[15px] align-middle">
           <span className="text-[18px]">
-            <button> Править</button>
+            <button> Edit</button>
           </span>
 
           <span
@@ -42,7 +44,7 @@ export default function WorldTime() {
         </div>
       </div>
       <div className="w-[320px] h-[50px] text-left">
-        <h1 className=" font-[600] justify-start mx-[12px]"> Мировые часы </h1>
+        <h1 className=" font-[600] justify-start mx-[12px]"> World time </h1>
       </div>
       {showListCities__modal && (
         <Modal
@@ -50,10 +52,9 @@ export default function WorldTime() {
           buttonCancel={() => setShowListCities__modal(!showListCities__modal)}
         />
       )}
-      <p style={{ fontSize: "14px", color: "lightblue" }}> местное время</p>
-      <div style={{ fontSize: "14px", color: "yellow" }}>
-        {" "}
-        {`сделать через timeZone ${dateNow}` || "Loading..."}
+      <div className="text-[16px] text-[#ecec9a] pb-[5px] ">
+        <div className="inline pr-[20px]"> Local time:</div>{" "}
+        {(dateNow && dateNow) || "Loading..."}
       </div>
       <Clock />
     </div>

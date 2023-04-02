@@ -1,11 +1,7 @@
-// "use client"
-
 import React, { useState, useEffect } from "react";
 import { useInterval } from "../hooks/use-interval";
 import { arrSelectedCities } from "../data/data_selectedCities";
 import { timeZone } from "../data/day";
-
-console.log("сырой массив", arrSelectedCities);
 
 export default function Clock(props: {}) {
   const [listSelectedCities, setListSelectedCities] =
@@ -30,30 +26,32 @@ export default function Clock(props: {}) {
   }, [listSelectedCities]);
 
   return (
-    <div>
+    <div
+      style={{
+        height: "390px",
+        overflowY: "auto",
+        width: "95%",
+        margin: "0 auto",
+      }}
+    >
       {listSelectedCities ? (
         listSelectedCities.map(
           (item: { city: string; time: string }, index: number) => {
             return (
               <div
-                style={{
-                  color: "#9aad9a",
-                  fontSize: "17px",
-                  padding: "10px 0",
-                }}
+                className="text-[17px] text-[#9aad9a] py-[10px] border-b-2 border-solid "
                 key={index.toString()}
               >
-                <div>{item.city} :</div>
+                <div className="text-left ml-[15px] text-[white]">
+                  {item.city} :
+                </div>
                 <span>{item.time}</span>
               </div>
             );
           }
         )
       ) : (
-        <div style={{ color: "#9aad9a", fontSize: "17px" }}>
-          {" "}
-          тут будут выбранные вами города{" "}
-        </div>
+        <div className="text-[#9aad9a] text-[17px] ">Load...</div>
       )}
     </div>
   );

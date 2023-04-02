@@ -8,7 +8,3 @@ dayjs.extend(timezone);
 export const timeZone = (city) => {
   return String(dayjs.utc(dayjs()).tz(city).$d);
 };
-
-export const localTime = () => {
-  return dayjs(new Date().getTime());
-};
