@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
 import Header from "./Header";
 import Alarm from "./Alarm";
 import StopWatch from "./StopWatch";
 import Timer from "./Timer";
 import WorldTime from "./WorldTime";
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { alarm, stopWatch, timer, worldTime } from "../data/data";
 
 export default function Page() {
@@ -17,36 +17,36 @@ export default function Page() {
   const arrSetState = [
     {
       id: worldTime.id,
-      state: (param: any) => setWorldTimeState(param)
+      state: (param: any) => setWorldTimeState(param),
     },
     {
       id: alarm.id,
-      state: (param: any) => setAlarmState(param)
+      state: (param: any) => setAlarmState(param),
     },
     {
       id: stopWatch.id,
-      state: (param: any) => setStopwatchState(param)
+      state: (param: any) => setStopwatchState(param),
     },
     {
       id: timer.id,
-      state: (param: any) => setTimerState(param)
+      state: (param: any) => setTimerState(param),
     },
   ];
 
   const checked = (event: any) => {
     const targetID = event.target.id;
 
-    console.log("ID", targetID, event.target);
+    // console.log("ID", targetID, event.target);
 
-    arrSetState.map(item => {
+    arrSetState.map((item) => {
       switch (true) {
-        case (item.id === targetID):
+        case item.id === targetID:
           return item.state(true);
-        case (item.id !== targetID):
-          return item.state(false)
+        case item.id !== targetID:
+          return item.state(false);
       }
-    })
-  }
+    });
+  };
 
   return (
     <>
@@ -57,27 +57,19 @@ export default function Page() {
         {timerState ? <Timer></Timer> : false}
       </div>
       <Header
-        alarmState={
-          (event: any) => {
-            return checked(event)
-          }
-        }
-        stopwatchState={
-          (event: any) => {
-            return checked(event)
-          }
-        }
-        timerState={
-          (event: any) => {
-            return checked(event)
-          }
-        }
-        worldTimeState={
-          (event: any) => {
-            return checked(event)
-          }
-        }
+        alarmState={(event: any) => {
+          return checked(event);
+        }}
+        stopwatchState={(event: any) => {
+          return checked(event);
+        }}
+        timerState={(event: any) => {
+          return checked(event);
+        }}
+        worldTimeState={(event: any) => {
+          return checked(event);
+        }}
       />
     </>
-  )
+  );
 }

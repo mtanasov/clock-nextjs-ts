@@ -1,18 +1,20 @@
 import React, { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import { useInterval } from "../hooks/use-interval";
+import { useLocalStorage } from "@mantine/hooks";
 import Clock from "./Clock";
-
-//todo ???
-// import cities from "all-the-cities";
-// console.log(cities.filter((city: any) => city.name.match("Albuquerque")));
 
 const Modal = dynamic(() => import("./modalWorldTime/modal__worldTime"));
 
 export default function WorldTime() {
+  // const [storageCities, setStorageCities] = useLocalStorage({
+  //   key: "worldTime-city",
+  //   defaultValue: [],
+  // });
   const [display, setDisplay] = useState("none");
   const [showListCities__modal, setShowListCities__modal] = useState(false);
   const [dateNow, setDateNow] = useState<string | undefined>();
+  const [stateEdit, setStateEdit] = useState(false);
   const date = new Date().toLocaleTimeString();
 
   const interval = useInterval(() => setDateNow(() => `${date}`), 1000);
@@ -31,7 +33,14 @@ export default function WorldTime() {
       <div className="w-[320px] h-[30px]  text-main-orange">
         <div className="flex justify-between h-[100%] items-center mx-[15px] align-middle">
           <span className="text-[18px]">
-            <button> Edit</button>
+            <button
+              onClick={() => {
+                setStateEdit(!stateEdit);
+              }}
+            >
+              {" "}
+              Edit
+            </button>
           </span>
 
           <span
@@ -56,7 +65,7 @@ export default function WorldTime() {
         <div className="inline pr-[20px]"> Local time:</div>{" "}
         {(dateNow && dateNow) || "Loading..."}
       </div>
-      <Clock />
+      <Clock edit={stateEdit} />
     </div>
   );
 }
