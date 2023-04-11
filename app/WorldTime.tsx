@@ -25,7 +25,7 @@ export default function WorldTime() {
   }, [dateNow]);
 
   const style = {
-    worldTime_main: " text-bermuda text-[30px]",
+    worldTime_main: " text-bermuda text-[30px] text-center",
   };
 
   return (
@@ -61,7 +61,7 @@ export default function WorldTime() {
           buttonCancel={() => setShowListCities__modal(!showListCities__modal)}
         />
       )}
-      <div className="text-[16px] text-[#ecec9a] pb-[5px] ">
+      <div className="text-[18px] text-[#ecec9a] font-mono pb-[5px] ">
         <div className="inline pr-[20px]"> Local time:</div>{" "}
         {(dateNow && dateNow) || "Loading..."}
       </div>

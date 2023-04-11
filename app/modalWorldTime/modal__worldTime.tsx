@@ -1,4 +1,10 @@
-import React, { PropsWithChildren, useState } from "react";
+import React, {
+  PropsWithChildren,
+  useState,
+  useRef,
+  InputHTMLAttributes,
+  useEffect,
+} from "react";
 import { style } from "./style-modalWorldTime";
 import { arrayCities } from "../../data/time-zone";
 import { useLocalStorage } from "@mantine/hooks";
@@ -19,6 +25,7 @@ const Modal = ({
     key: "worldTime-city",
     defaultValue: [],
   });
+  const inputValue = useRef() as React.MutableRefObject<HTMLInputElement>;
 
   return (
     <div id="modal" className={style.modal(active)}>
@@ -32,6 +39,8 @@ const Modal = ({
             id="modal__search"
             className={style.modal__search}
             placeholder="🔍 Search"
+            ref={inputValue}
+            onInput={() => {}}
           />
           <button
             id="modal__cancel"
@@ -50,8 +59,11 @@ const Modal = ({
                   key={index.toString()}
                   className={style.button}
                   onClick={() => {
-                    // buttonCancel();
+                    buttonCancel();
                     // setListCities();
+                    // setListCities(() =>
+                    //   arrayCities.filter((city) => city !== item)
+                    // );
                     return setStorageCities((): any => {
                       return (storageCities as string[]).concat(item);
                     });

@@ -3,11 +3,9 @@ import { useInterval } from "../hooks/use-interval";
 import { arrSelectedCities } from "../data/data_selectedCities";
 import { timeZone } from "../data/day";
 import { useLocalStorage } from "@mantine/hooks";
+
 // TODO добавить : Убирать из массива списка города которые уже есть в рендере мирового мремени
-export default function Clock(props: {
-  edit: boolean;
-  listSelectedClock: [{ city: "" }];
-}) {
+export default function Clock(props: { edit: boolean }) {
   const [storageCities, setStorageCities] = useLocalStorage({
     key: "worldTime-city",
     defaultValue: [],
@@ -55,7 +53,7 @@ export default function Clock(props: {
                 key={index.toString()}
               >
                 <div className="flex items-start flex-col">
-                  <div className="text-left ml-[15px] text-[white] text-[14px]">
+                  <div className="text-left ml-[15px] text-[burlywood] text-[14px]">
                     {item.city} :
                   </div>
                   <div>{item.time}</div>

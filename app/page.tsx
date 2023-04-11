@@ -49,7 +49,7 @@ export default function Page() {
   };
 
   return (
-    <>
+    <div className="h-[568px] w-[320px] bg-black">
       <div className="h-[515px]">
         {stopwatchState ? <StopWatch></StopWatch> : false}
         {alarmState ? <Alarm></Alarm> : false}
@@ -70,6 +70,6 @@ export default function Page() {
           return checked(event);
         }}
       />
-    </>
+    </div>
   );
 }

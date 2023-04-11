@@ -16,7 +16,7 @@ export const style = {
   modal__conteiner: "h-[100%] w-[100%] overflow-y-auto",
   modal__title: " text-bermuda text-[14px] h-[40px] pt-[10px]",
   modal__control: " w-[310px] h-[50px] fixed align-center justify-center items-center flex flex-row gap-[10px] ml-[5px]",
-  modal__search: "w-[210px] h-[30px] px-[5px] rounded-[10px] bg-search-bg attr text-[14px] align-middle",
+  modal__search: "w-[210px] h-[30px] text-[white] px-[5px] rounded-[10px] bg-search-bg attr text-[14px] align-middle",
   cities: "flex flex-col items-start pt-[50px]",
   button: "w-[100%] h-[35px] text-left text-[#bfc2c2] text-[0.8rem] align-middle pl-[15px] border-solid border-b border-[#878d8d]"
   // modal__cancel() { },
