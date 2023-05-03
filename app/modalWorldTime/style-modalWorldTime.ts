@@ -13,7 +13,7 @@ export const style = {
       return func_style_modal("", "animate-close_modal", "transition-all");
     }
   }, 
-  modal__conteiner: "h-[100%] w-[100%] overflow-y-auto",
+  modal__conteiner: "h-[568px] w-[320px] overflow-y-auto",
   modal__title: " text-bermuda text-[14px] h-[40px] pt-[10px]",
   modal__control: " w-[310px] h-[50px] fixed align-center justify-center items-center flex flex-row gap-[10px] ml-[5px]",
   modal__search: "w-[210px] h-[30px] text-[white] px-[5px] rounded-[10px] bg-search-bg attr text-[14px] align-middle",

@@ -40,7 +40,17 @@ const Modal = ({
             className={style.modal__search}
             placeholder="🔍 Search"
             ref={inputValue}
-            onInput={() => {}}
+            onInput={(event) => {
+              setListCities(
+                /*   listCities.includes(event.currentTarget.value.toLowerCase())
+                  ? */ listCities.filter((city: "") => {
+                  return city
+                    .toLowerCase()
+                    .includes(event.currentTarget.value.toLowerCase());
+                })
+                /*   : listCities */
+              );
+            }}
           />
           <button
             id="modal__cancel"

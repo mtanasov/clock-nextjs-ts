@@ -40,24 +40,11 @@ export default function Header(props: {
         id={worldTime.id}
         onClick={props.worldTimeState}
       >
-        {/* <div id={worldTime.id}> */}
-        {/* <IconWorld
-          className={iconStyle}
-          stroke={iconStroke}
-          size={iconSize}
-        /> */}
-        Мировые часы
-        {/* </div> */}
+        World time
       </button>
 
       <button className={buttonStyle} id={alarm.id} onClick={props.alarmState}>
-        {/* <div id={alarm.id}> */}
-        {/* <IconAlarm
-          className={iconStyle}
-          stroke={iconStroke}
-          size={iconSize} /> */}
-        Будильник
-        {/* </div> */}
+        Alarm
       </button>
 
       <button
@@ -65,23 +52,11 @@ export default function Header(props: {
         id={stopWatch.id}
         onClick={props.stopwatchState}
       >
-        {/* <div id={stopWatch.id}> */}
-        {/* <IconClock
-          className={iconStyle}
-          stroke={iconStroke}
-          size={iconSize} /> */}
-        Секундомер
-        {/* </div> */}
+        Stopwatch
       </button>
 
       <button className={buttonStyle} id={timer.id} onClick={props.timerState}>
-        {/* <div id={timer.id}> */}
-        {/* <IconClockPlay
-          className={iconStyle}
-          stroke={iconStroke}
-          size={iconSize} /> */}
-        Таймер
-        {/* </div> */}
+        Timer
       </button>
     </div>
   );

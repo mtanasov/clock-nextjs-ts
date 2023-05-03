@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useInterval } from "../hooks/use-interval";
-import { arrSelectedCities } from "../data/data_selectedCities";
 import { timeZone } from "../data/day";
 import { useLocalStorage } from "@mantine/hooks";
 

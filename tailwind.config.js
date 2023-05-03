@@ -35,10 +35,10 @@ module.exports = {
         },
         open_modal: {
           "0%": { top: "100%" },
-          "100%": { top: "18px" },
+          "100%": { top: "118px" },
         },
         close_modal: {
-          "0%": { top: "18px" },
+          "0%": { top: "118px" },
           "100%": { top: "100%" },
         },
       },
