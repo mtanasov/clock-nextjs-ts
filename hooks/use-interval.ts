@@ -12,6 +12,7 @@ export function useInterval(fn: () => void, interval: number) {
   const start = () => {
     setActive((old) => {
       if (!old && !intervalRef.current) {
+        //@ts-ignore
         intervalRef.current = window.setInterval(fnRef.current, interval);
       }
       return true;
@@ -21,7 +22,7 @@ export function useInterval(fn: () => void, interval: number) {
   const stop = () => {
     setActive(false);
     window.clearInterval(intervalRef.current);
-    intervalRef.current = undefined;
+    intervalRef.current =  undefined;
   };
 
   const toggle = () => {

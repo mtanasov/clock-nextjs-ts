@@ -43,7 +43,7 @@ const Modal = ({
             onInput={(event) => {
               setListCities(
                 /*   listCities.includes(event.currentTarget.value.toLowerCase())
-                  ? */ listCities.filter((city: "") => {
+                  ? */ listCities.filter((city) => {
                   return city
                     .toLowerCase()
                     .includes(event.currentTarget.value.toLowerCase());
