@@ -2,9 +2,7 @@
 export default function Alarm() {
   return (
     <>
-      <div
-        className="text-bermuda"
-      > Alarm </div>
+      <div className="text-bermuda"> Alarm under development </div>
     </>
-  )
+  );
 }

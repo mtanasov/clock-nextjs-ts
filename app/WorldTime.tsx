@@ -37,10 +37,7 @@ export default function WorldTime() {
               onClick={() => {
                 setStateEdit(!stateEdit);
               }}
-            >
-              {" "}
-              Edit
-            </button>
+            ></button>
           </span>
 
           <span

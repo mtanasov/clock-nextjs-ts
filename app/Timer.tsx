@@ -2,9 +2,7 @@
 export default function Timer() {
   return (
     <>
-      <div
-        className="text-bermuda"
-      > Timer </div>
+      <div className="text-bermuda"> Timer under development</div>
     </>
-  )
+  );
 }
