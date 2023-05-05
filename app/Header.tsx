@@ -1,20 +1,6 @@
 import React, { useState, ButtonHTMLAttributes } from "react";
 // import styles from "./global.module.css";
 import { alarm, stopWatch, timer, worldTime } from "../data/data";
-// import { IconWorld, IconAlarm, IconClock, IconClockPlay } from '@tabler/icons-react';
-// import dayjs from 'dayjs';
-
-// import * as dayjs from 'dayjs';
-
-/* const dayjs = require('dayjs')
-
-const utc = require('dayjs/plugin/utc');
-const timezone = require('dayjs/plugin/timezone');
-
-dayjs.extend(utc)
-dayjs.extend(timezone)
-
-console.log(dayjs.utc(dayjs()).tz('Europe/Paris')); */
 
 export default function Header(props: {
   alarmState: any;

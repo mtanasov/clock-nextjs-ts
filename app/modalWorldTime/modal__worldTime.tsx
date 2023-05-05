@@ -11,13 +11,12 @@ import { useLocalStorage } from "@mantine/hooks";
 interface ModalWT {
   active: boolean;
   buttonCancel: () => void;
+  st: () => void;
 }
-
-// TODO переписать стили на функции
 
 const Modal = ({
   buttonCancel,
-  children,
+  st,
   active,
 }: PropsWithChildren<ModalWT>) => {
   const [listCities, setListCities] = useState(arrayCities);
@@ -30,9 +29,6 @@ const Modal = ({
   return (
     <div id="modal" className={style.modal(active)}>
       <div className={style.modal__conteiner}>
-        <div id="modal__title" className={style.modal__title}>
-          Select city
-        </div>
         <div id="modal__control" className={style.modal__control}>
           <input
             type="text"
@@ -42,13 +38,11 @@ const Modal = ({
             ref={inputValue}
             onInput={(event) => {
               setListCities(
-                /*   listCities.includes(event.currentTarget.value.toLowerCase())
-                  ? */ listCities.filter((city) => {
+                listCities.filter((city) => {
                   return city
                     .toLowerCase()
                     .includes(event.currentTarget.value.toLowerCase());
                 })
-                /*   : listCities */
               );
             }}
           />
@@ -70,10 +64,7 @@ const Modal = ({
                   className={style.button}
                   onClick={() => {
                     buttonCancel();
-                    // setListCities();
-                    // setListCities(() =>
-                    //   arrayCities.filter((city) => city !== item)
-                    // );
+                    // st()
                     return setStorageCities((): any => {
                       return (storageCities as string[]).concat(item);
                     });

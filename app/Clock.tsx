@@ -3,7 +3,6 @@ import { useInterval } from "../hooks/use-interval";
 import { timeZone } from "../data/day";
 import { useLocalStorage } from "@mantine/hooks";
 
-// TODO добавить : Убирать из массива списка города которые уже есть в рендере мирового мремени
 export default function Clock(props: { edit: boolean }) {
   const [storageCities, setStorageCities] = useLocalStorage({
     key: "worldTime-city",
